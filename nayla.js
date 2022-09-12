@@ -604,6 +604,16 @@ setUser("±ban", args[0], false)
 reply("Sukses unban user ini")
 break
 
+case 'chat': case 'menfess': case 'menfes': 
+if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
+if (!q) return reply(`Masukkan nomer&nama&chat\n> *Contoh?* : ${prefix + command} 6282347260729&Jokowi&Selamat pagi`)
+if (!q1) return reply(`Masukkan nomer&nama&chat\n> *Contoh?* : ${prefix + command} 6282347260729&Jokowi&Selamat pagi`)
+if (!q2) return reply(`Masukkan nomer&nama&chat\n> *Contoh?* : ${prefix + command} 6282347260729&Jokowi&Selamat pagi`)
+if (!q3) return reply(`Masukkan nomer&nama&chat\n> *Contoh?* : ${prefix + command} 6282347260729&Jokowi&Selamat pagi`)
+nayla.sendMessage(`${q1}@s.whatsapp.net`, {image:{url:"https://cdn-icons-png.flaticon.com/512/4712/4712029.png"}, caption:`Halo Ada pesan nih:3\n> *Dari* : ${q2}\n> *Jam* : ${jam}\n> *Pesan* : ${q3}`})
+reply("Sukses mengirim pesan pribadi")
+break
+
 
 case 'addcmd': case 'addlist': case 'addcommand':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
